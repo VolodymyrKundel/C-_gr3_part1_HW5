@@ -7,6 +7,8 @@
         public int Age;
         public string City;
 
+        public List<String> StudentsListOfCourses = new List<string>() { "Algebra", "Geometry" };
+
         public Student(string firstName, string lastName, int age, string city)
         {
             FirstName = firstName;
@@ -29,6 +31,12 @@
             Console.WriteLine("Last Name is: " + LastName);
             Console.WriteLine("Age is: " + Age);
             Console.WriteLine("City is: " + City);
+
+            Console.WriteLine("Students' list of courses:");
+            foreach (string s in StudentsListOfCourses)
+            {
+                Console.WriteLine("\t" + s);
+            }
         }
     }
 }
